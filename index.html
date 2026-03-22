@@ -6,7 +6,7 @@
     <title>Soon | ProductLed Assessment</title>
     <meta
       name="description"
-      content="HTML presentation of the Soon ProductLed assessment: strong self-serve monetization, weak activation sequencing."
+      content="Expanded HTML presentation of the Soon ProductLed assessment: strong self-serve monetization, weak activation sequencing."
     />
     <meta name="theme-color" content="#101323" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +30,7 @@
       </div>
       <div class="rail__meta">
         <span>March 21, 2026</span>
-        <span>HTML deck</span>
+        <span>Assessment rebuild</span>
       </div>
       <nav class="rail__nav" aria-label="Presentation sections"></nav>
       <div class="rail__controls">
@@ -46,8 +46,8 @@
             <p class="eyebrow">Soon • ProductLed assessment</p>
             <h1>Strong monetization. Fragile activation.</h1>
             <p class="lede">
-              Soon behaves like a credible self-serve business on the surface, but the first-run product
-              sequence still asks users to do too much before the product proves itself.
+              Soon already looks like a credible self-serve business from the outside, but the first-run
+              product sequence still asks users to do too much before the product proves value.
             </p>
 
             <div class="hero__chips">
@@ -61,7 +61,7 @@
               </div>
               <div class="metric-chip">
                 <span class="metric-chip__value">4/10</span>
-                <span class="metric-chip__label">Onboarding</span>
+                <span class="metric-chip__label">Activation / onboarding</span>
               </div>
             </div>
           </div>
@@ -70,15 +70,15 @@
             <p class="panel__eyebrow">Core diagnosis</p>
             <h2>Soon can sell itself better than it can activate itself.</h2>
             <ul class="bullet-list bullet-list--tight">
-              <li>Public pricing and checkout are already self-serve grade.</li>
-              <li>Activation breaks across verification, re-authentication, setup, and empty-state value.</li>
-              <li>The main growth constraint is sequencing, not acquisition or monetization.</li>
+              <li>Public pricing, trial entry, and checkout are already PLG-grade.</li>
+              <li>Email verification, second sign-in, setup steps, and empty-state value create drag.</li>
+              <li>The main growth constraint is sequencing, not monetization or top-of-funnel access.</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section class="slide" id="thesis" data-title="Why It Matters">
+      <section class="slide" id="summary" data-title="Executive Read">
         <div class="section-heading">
           <p class="eyebrow">Executive read</p>
           <h2>The opportunity is real because the hard commercial pieces already exist.</h2>
@@ -88,10 +88,10 @@
           <article class="insight-card insight-card--positive">
             <p class="insight-card__label">What Soon already gets right</p>
             <ul class="bullet-list">
-              <li>Clear market wedge between spreadsheets and heavy WFM suites.</li>
-              <li>Public pricing, free trial, and in-app billing visible without sales friction.</li>
-              <li>Real Stripe checkout path, not a fake PLG surface that collapses into “talk to sales.”</li>
-              <li>A serious scheduling UI once the user finally reaches it.</li>
+              <li>Clear wedge between spreadsheets and heavy workforce management suites.</li>
+              <li>Public pricing, no-credit-card trial, and in-app billing are visible without sales friction.</li>
+              <li>Stripe checkout appears directly for lower tiers instead of collapsing into “talk to sales.”</li>
+              <li>The core board UI looks serious and purpose-built once the user finally reaches it.</li>
             </ul>
           </article>
 
@@ -99,9 +99,9 @@
             <p class="insight-card__label">Where the first-run journey leaks</p>
             <ul class="bullet-list">
               <li>Email verification interrupts momentum and still leads to a second sign-in.</li>
-              <li>Setup questions and team configuration appear before the product proves value.</li>
-              <li>The first board is empty, so the aha moment is delayed or absent.</li>
-              <li>AI/manual shift creation did not land as a crisp, confidence-building win in the observed run.</li>
+              <li>Team setup and “tell us your challenge” appear before any user-serving proof of value.</li>
+              <li>The first board is empty, which delays the aha moment.</li>
+              <li>AI and manual shift creation were not crisp enough in the observed run to create trust.</li>
             </ul>
           </article>
         </div>
@@ -114,10 +114,94 @@
         </div>
       </section>
 
-      <section class="slide" id="sequence" data-title="Activation Sequence">
+      <section class="slide" id="context" data-title="Context">
+        <div class="section-heading">
+          <p class="eyebrow">Research and context</p>
+          <h2>The product category is attractive, the persona is clear, and the wedge is credible.</h2>
+        </div>
+
+        <div class="fact-grid">
+          <article class="fact-card">
+            <p class="fact-card__label">What the product does</p>
+            <h3>Shift-based workforce management</h3>
+            <p>Scheduling, leave, intraday coverage, and coordination for shift-heavy teams.</p>
+          </article>
+          <article class="fact-card">
+            <p class="fact-card__label">Primary persona</p>
+            <h3>Operations and support team leads</h3>
+            <p>Especially customer support, healthcare, housing, warehousing, and other coverage-heavy teams.</p>
+          </article>
+          <article class="fact-card">
+            <p class="fact-card__label">Company context</p>
+            <h3>Netherlands-based, 11–50 employees</h3>
+            <p>Public sources show a real operating business, but no clearly verified public funding round in this run.</p>
+          </article>
+          <article class="fact-card">
+            <p class="fact-card__label">Category wedge</p>
+            <h3>Between Excel and enterprise WFM</h3>
+            <p>Soon positions itself as lighter than Kronos/Verint/NICE and more robust than spreadsheets.</p>
+          </article>
+        </div>
+
+        <div class="source-strip glass">
+          <p><strong>Sources used:</strong> homepage, pricing, about page, LinkedIn company page, and a fresh product run with screenshots.</p>
+        </div>
+      </section>
+
+      <section class="slide" id="persona" data-title="User + Aha">
+        <div class="section-heading">
+          <p class="eyebrow">User and value moment</p>
+          <h2>The right first job is obvious. The product just does not get there fast enough.</h2>
+        </div>
+
+        <div class="three-up">
+          <article class="insight-card">
+            <p class="insight-card__label">User endgame</p>
+            <h3>“Give me a schedule I can trust.”</h3>
+            <p>
+              The buyer does not want onboarding for its own sake. They want a usable schedule that reflects
+              staffing needs and reduces operational chaos.
+            </p>
+          </article>
+          <article class="insight-card">
+            <p class="insight-card__label">Aha moment hypothesis</p>
+            <h3>See a populated board or generate one in seconds.</h3>
+            <p>
+              The aha is either a weekly schedule that already looks real or an AI-assisted schedule that
+              resolves quickly and clearly.
+            </p>
+          </article>
+          <article class="insight-card insight-card--warning">
+            <p class="insight-card__label">Observed reality</p>
+            <h3>We reached the surface, not the payoff.</h3>
+            <p>
+              The board appeared, but the first board was empty and the AI/manual creation paths did not
+              produce a decisive, confidence-building win during the observed run.
+            </p>
+          </article>
+        </div>
+
+        <div class="statement-band statement-band--light">
+          <p>
+            The strategy question is not “what should Soon help users do?” The answer is already clear.
+            The question is <strong>how quickly Soon can deliver that moment after signup.</strong>
+          </p>
+        </div>
+      </section>
+
+      <section class="slide" id="journey" data-title="Journey Scores">
+        <div class="section-heading">
+          <p class="eyebrow">Val-style onboarding read</p>
+          <h2>The commercial surface is strong, but the first-value choreography is weak.</h2>
+        </div>
+
+        <div id="journey-grid" class="journey-grid"></div>
+      </section>
+
+      <section class="slide" id="timeline" data-title="Activation Timeline">
         <div class="section-heading">
           <p class="eyebrow">Observed path</p>
-          <h2>The first-value journey is too long for the amount of value it delivers.</h2>
+          <h2>The path from landing page to usable schedule is too long for the amount of value it delivers.</h2>
         </div>
 
         <div class="timeline-shell glass">
@@ -125,101 +209,273 @@
         </div>
       </section>
 
-      <section class="slide" id="evidence" data-title="Evidence">
+      <section class="slide" id="proof-signup" data-title="Signup Friction">
         <div class="section-heading">
-          <p class="eyebrow">Evidence from the fresh run</p>
-          <h2>The screenshots tell a consistent story: strong intent capture, weak activation choreography.</h2>
+          <p class="eyebrow">Friction evidence</p>
+          <h2>Signup itself is not the problem. The momentum breaks after signup.</h2>
         </div>
 
-        <div class="gallery gallery--activation">
-          <button class="shot-card" type="button" data-lightbox="assets/screenshots/11-post-signin-screen.png" data-caption="First logged-in state: real app chrome, but the user lands on an empty boards screen plus setup checklist.">
-            <img src="assets/screenshots/11-post-signin-screen.png" alt="Soon post sign-in screen with setup modal" loading="lazy" />
-            <span>Post sign-in: empty boards + setup</span>
-          </button>
-          <button class="shot-card" type="button" data-lightbox="assets/screenshots/16-challenge-step.png" data-caption="Soon asks the user to describe their challenge before the scheduling workflow has proved value.">
-            <img src="assets/screenshots/16-challenge-step.png" alt="Soon onboarding challenge question" loading="lazy" />
-            <span>Company-serving challenge prompt</span>
-          </button>
-          <button class="shot-card" type="button" data-lightbox="assets/screenshots/19-empty-boards-state.png" data-caption="The empty state is clean, but the user still has not experienced a populated schedule or obvious value moment.">
-            <img src="assets/screenshots/19-empty-boards-state.png" alt="Soon empty boards state" loading="lazy" />
-            <span>Empty state before value</span>
-          </button>
-          <button class="shot-card" type="button" data-lightbox="assets/screenshots/26-after-long-ai-wait.png" data-caption="AI scheduling is strategically promising, but the observed result state was still too ambiguous to feel magical or trustworthy.">
-            <img src="assets/screenshots/26-after-long-ai-wait.png" alt="Soon AI scheduling after long wait" loading="lazy" />
-            <span>AI wait without strong payoff</span>
-          </button>
+        <div class="evidence-layout">
+          <article class="insight-card evidence-copy">
+            <p class="insight-card__label">What the screenshots show</p>
+            <ul class="bullet-list">
+              <li>The signup page is clean and modern, with SSO and minimal form friction.</li>
+              <li>Password creation lacks strong progress context and leaves the next state a little ambiguous.</li>
+              <li>Email verification becomes a context switch into the inbox.</li>
+              <li>The user still has to sign in again and then complete setup before seeing product value.</li>
+            </ul>
+          </article>
+
+          <div class="gallery gallery--quad">
+            <button class="shot-card" type="button" data-lightbox="assets/screenshots/02-signup-page.png" data-caption="The signup page is clean, modern, and aligned with a self-serve motion. The problem starts after this point.">
+              <img src="assets/screenshots/02-signup-page.png" alt="Soon signup page" loading="lazy" />
+              <span>Clean signup surface</span>
+            </button>
+            <button class="shot-card" type="button" data-lightbox="assets/screenshots/06-email-verified-next-screen.png" data-caption="Verification requires the user to leave the product and resolve trust outside the core product flow.">
+              <img src="assets/screenshots/06-email-verified-next-screen.png" alt="Soon email verified state" loading="lazy" />
+              <span>Verification context switch</span>
+            </button>
+            <button class="shot-card" type="button" data-lightbox="assets/screenshots/11-post-signin-screen.png" data-caption="The first logged-in state shows real app chrome, but the user still lands on an empty board state plus setup checklist.">
+              <img src="assets/screenshots/11-post-signin-screen.png" alt="Soon post sign-in empty board screen" loading="lazy" />
+              <span>Post sign-in without payoff</span>
+            </button>
+            <button class="shot-card" type="button" data-lightbox="assets/screenshots/12-team-setup-filled.png" data-caption="Soon asks for team setup fidelity before the product has earned the right to ask for it.">
+              <img src="assets/screenshots/12-team-setup-filled.png" alt="Soon team setup step" loading="lazy" />
+              <span>Setup before value</span>
+            </button>
+          </div>
         </div>
       </section>
 
-      <section class="slide" id="scorecard" data-title="Scorecard">
+      <section class="slide" id="proof-value" data-title="Value Proof">
         <div class="section-heading">
-          <p class="eyebrow">9 ProductLed system components</p>
+          <p class="eyebrow">Value proof</p>
+          <h2>The core scheduling surface is promising, but the first outcome still feels fragile.</h2>
+        </div>
+
+        <div class="evidence-layout">
+          <article class="insight-card evidence-copy">
+            <p class="insight-card__label">Why this matters</p>
+            <ul class="bullet-list">
+              <li>The board itself looks good enough to support a strong product-led story.</li>
+              <li>The AI prompt is strategically compelling, but it needs faster and clearer output.</li>
+              <li>The manual new-shift path exposes a useful composer, but the session did not clearly prove persistence.</li>
+              <li>The product looks capable. The first outcome still does not feel guaranteed.</li>
+            </ul>
+          </article>
+
+          <div class="gallery gallery--quad">
+            <button class="shot-card" type="button" data-lightbox="assets/screenshots/20-create-schedule-flow.png" data-caption="This is where Soon starts to feel like a real product: the scheduling board is serious and purpose-built.">
+              <img src="assets/screenshots/20-create-schedule-flow.png" alt="Soon schedule board" loading="lazy" />
+              <span>Real schedule surface</span>
+            </button>
+            <button class="shot-card" type="button" data-lightbox="assets/screenshots/24-example-selected.png" data-caption="The AI panel is a strong story. It points toward a differentiated first-value moment if the result is fast and clear.">
+              <img src="assets/screenshots/24-example-selected.png" alt="Soon AI example selected" loading="lazy" />
+              <span>Strong AI promise</span>
+            </button>
+            <button class="shot-card" type="button" data-lightbox="assets/screenshots/25-generated-plan-or-result.png" data-caption="The observed AI result state did not feel crisp enough to count as a magical activation moment.">
+              <img src="assets/screenshots/25-generated-plan-or-result.png" alt="Soon AI generated plan result state" loading="lazy" />
+              <span>Ambiguous AI payoff</span>
+            </button>
+            <button class="shot-card" type="button" data-lightbox="assets/screenshots/27-manual-new-shift-flow.png" data-caption="Manual shift creation exposes practical product depth, but the first run still did not clearly prove completion and persistence.">
+              <img src="assets/screenshots/27-manual-new-shift-flow.png" alt="Soon manual new shift flow" loading="lazy" />
+              <span>Manual path with weak proof</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="scorecard" data-title="9 Components">
+        <div class="section-heading">
+          <p class="eyebrow">ProductLed system scorecard</p>
           <h2>The score pattern is coherent: strong outward commercial signal, weaker internal activation system.</h2>
         </div>
 
         <div class="score-layout">
           <div id="score-grid" class="score-grid"></div>
-          <div class="stage-column">
-            <div id="stage-grid" class="stage-grid"></div>
-            <div id="flywheel-grid" class="flywheel-grid"></div>
-          </div>
+          <article class="insight-card score-summary">
+            <p class="insight-card__label">Score read</p>
+            <h3>Most of the weakness is concentrated in activation and operating discipline.</h3>
+            <p>
+              Strategy, user understanding, offer quality, and pricing all clear a basic PLG bar. The real drag
+              shows up in onboarding, data, process, and the visible coordination required to make first value feel reliable.
+            </p>
+            <p class="score-summary__note">
+              Lower-confidence scores on data, process, and team are external inferences from product output, not internal access.
+            </p>
+          </article>
         </div>
       </section>
 
-      <section class="slide" id="monetization" data-title="Monetization">
+      <section class="slide" id="stages" data-title="Stages + Flywheel">
         <div class="section-heading">
-          <p class="eyebrow">Commercial upside</p>
-          <h2>Soon already has the bones of a strong PLG revenue motion.</h2>
+          <p class="eyebrow">System read by stage</p>
+          <h2>Soon is much further along on attract and revenue than it is on activation and scale readiness.</h2>
+        </div>
+
+        <div class="score-layout score-layout--balanced">
+          <div id="stage-grid" class="stage-grid"></div>
+          <div id="flywheel-grid" class="flywheel-grid"></div>
+        </div>
+
+        <div class="statement-band">
+          <p>
+            This is an unusually good problem to have. Soon is not missing a monetization engine.
+            <strong>It is under-converting the traffic and trial intent it can already attract.</strong>
+          </p>
+        </div>
+      </section>
+
+      <section class="slide" id="model" data-title="Model">
+        <div class="section-heading">
+          <p class="eyebrow">Model analysis</p>
+          <h2>The PLG model is directionally strong, but the trial experience creates avoidable ambiguity.</h2>
         </div>
 
         <div class="two-up two-up--wide">
           <div class="insight-stack">
             <article class="insight-card insight-card--positive">
-              <p class="insight-card__label">What makes the monetization path credible</p>
+              <p class="insight-card__label">What works in the model</p>
               <ul class="bullet-list">
-                <li>Public pricing is visible and specific.</li>
-                <li>Trial entry does not require a credit card.</li>
-                <li>Upgrade is discoverable inside the app.</li>
-                <li>Checkout opens into Stripe directly, which is rare and valuable.</li>
+                <li>No credit card required for trial entry.</li>
+                <li>Plan-specific trial lengths are commercially sensible.</li>
+                <li>A flat-fee smaller-team entry plan is strategically smart.</li>
+                <li>The lower-tier path supports real self-serve conversion.</li>
               </ul>
             </article>
             <article class="insight-card insight-card--warning">
-              <p class="insight-card__label">What still reduces trust</p>
+              <p class="insight-card__label">Where the model gets muddy</p>
               <ul class="bullet-list">
-                <li>Plan naming is inconsistent across site, app billing, and checkout.</li>
-                <li>Currency logic shifts across surfaces.</li>
-                <li>Trial context is not explicit enough inside the product.</li>
+                <li>The fresh account showed “29 Trial days left” without a clear plan explanation.</li>
+                <li>Public pricing and in-app billing use different plan names.</li>
+                <li>The app did not clearly surface the small-team starter option during the run.</li>
+                <li>The user can ask, “What am I actually on right now?” too early in the trial.</li>
               </ul>
             </article>
           </div>
 
-          <div class="gallery gallery--commerce">
-            <button class="shot-card shot-card--tall" type="button" data-lightbox="assets/screenshots/34-marketing-pricing-page.png" data-caption="Public pricing is one of Soon’s strengths. The company is willing to let buyers self-educate and self-select.">
-              <img src="assets/screenshots/34-marketing-pricing-page.png" alt="Soon public pricing page" loading="lazy" />
-              <span>Public pricing page</span>
+          <div class="gallery gallery--pair">
+            <button class="shot-card" type="button" data-lightbox="assets/screenshots/30-board-before-upgrade-click.png" data-caption="The board already carries trial and upsell context, but the product does not explain plan state cleanly enough.">
+              <img src="assets/screenshots/30-board-before-upgrade-click.png" alt="Soon board before upgrade click" loading="lazy" />
+              <span>Trial context inside product</span>
             </button>
-            <button class="shot-card" type="button" data-lightbox="assets/screenshots/31-upgrade-path.png" data-caption="The in-app upgrade path is visible and commercially strong.">
-              <img src="assets/screenshots/31-upgrade-path.png" alt="Soon upgrade path inside app" loading="lazy" />
-              <span>In-app upgrade path</span>
-            </button>
-            <button class="shot-card" type="button" data-lightbox="assets/screenshots/33-stripe-checkout-popup.png" data-caption="This is real self-serve monetization: Stripe opens without collapsing into an enterprise-only motion.">
-              <img src="assets/screenshots/33-stripe-checkout-popup.png" alt="Soon Stripe checkout popup" loading="lazy" />
-              <span>Real Stripe checkout</span>
+            <button class="shot-card" type="button" data-lightbox="assets/screenshots/31-upgrade-path.png" data-caption="The in-product upgrade path is strong, but the surrounding plan language still needs to be unified.">
+              <img src="assets/screenshots/31-upgrade-path.png" alt="Soon upgrade path" loading="lazy" />
+              <span>Strong upgrade surface</span>
             </button>
           </div>
         </div>
       </section>
 
-      <section class="slide" id="plan" data-title="Fix Sequence">
+      <section class="slide" id="pricing" data-title="Pricing">
         <div class="section-heading">
-          <p class="eyebrow">What to do next</p>
-          <h2>Fix the sequence before adding more surface area.</h2>
+          <p class="eyebrow">Pricing and checkout</p>
+          <h2>Pricing is one of Soon’s strengths, but only if the presentation becomes consistent.</h2>
         </div>
 
-        <div class="roadmap-layout">
-          <div id="quick-wins" class="roadmap-block"></div>
-          <div id="roadmap-grid" class="roadmap-grid"></div>
+        <div class="two-up two-up--wide">
+          <div class="insight-stack">
+            <article class="insight-card insight-card--positive">
+              <p class="insight-card__label">What works</p>
+              <ul class="bullet-list">
+                <li>Public pricing is visible and detailed.</li>
+                <li>Lower tiers are fully self-serve.</li>
+                <li>Stripe checkout supports a clean trial-first conversion motion.</li>
+                <li>Enterprise is segmented properly into contact-sales.</li>
+              </ul>
+            </article>
+            <article class="insight-card insight-card--critical">
+              <p class="insight-card__label">What undermines trust</p>
+              <ul class="bullet-list">
+                <li>Marketing uses Start / Grow / Scale while the app uses Team / Business / Enterprise.</li>
+                <li>Currency presentation shifts across site, app, and checkout.</li>
+                <li>That inconsistency adds avoidable doubt exactly when a user is ready to pay.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="gallery gallery--commerce">
+            <button class="shot-card shot-card--tall" type="button" data-lightbox="assets/screenshots/34-marketing-pricing-page.png" data-caption="Public pricing is one of Soon’s strongest PLG signals. Buyers can self-educate without a sales gate.">
+              <img src="assets/screenshots/34-marketing-pricing-page.png" alt="Soon public pricing page" loading="lazy" />
+              <span>Public pricing</span>
+            </button>
+            <button class="shot-card" type="button" data-lightbox="assets/screenshots/31-upgrade-path.png" data-caption="The in-app billing path is visible and commercially strong.">
+              <img src="assets/screenshots/31-upgrade-path.png" alt="Soon in-app billing page" loading="lazy" />
+              <span>In-app billing</span>
+            </button>
+            <button class="shot-card" type="button" data-lightbox="assets/screenshots/33-stripe-checkout-popup.png" data-caption="This is real self-serve monetization. The issue is not whether Soon can charge users; it is whether it can activate them first.">
+              <img src="assets/screenshots/33-stripe-checkout-popup.png" alt="Soon Stripe checkout popup" loading="lazy" />
+              <span>Stripe checkout</span>
+            </button>
+          </div>
         </div>
+      </section>
+
+      <section class="slide" id="positioning" data-title="Positioning">
+        <div class="section-heading">
+          <p class="eyebrow">Competitive positioning</p>
+          <h2>The wedge is credible: not Excel, not bloated enterprise WFM, but a lighter operational system.</h2>
+        </div>
+
+        <div class="two-up two-up--wide">
+          <article class="matrix-card">
+            <div class="matrix-grid">
+              <div class="matrix-cell matrix-cell--head">Option</div>
+              <div class="matrix-cell matrix-cell--head">What users trade off</div>
+              <div class="matrix-cell matrix-cell--head">Soon’s position</div>
+
+              <div class="matrix-cell matrix-cell--label">Excel / spreadsheets</div>
+              <div class="matrix-cell">Cheap and familiar, but operationally fragile and hard to coordinate.</div>
+              <div class="matrix-cell">Soon offers structure, scheduling logic, and collaboration without heavyweight overhead.</div>
+
+              <div class="matrix-cell matrix-cell--label">Enterprise WFM suites</div>
+              <div class="matrix-cell">Powerful, but heavy, expensive, and often overbuilt for smaller or faster-moving teams.</div>
+              <div class="matrix-cell">Soon presents as the lighter, faster alternative for real shift operations.</div>
+
+              <div class="matrix-cell matrix-cell--label">Soon today</div>
+              <div class="matrix-cell">Commercially convincing and visually credible.</div>
+              <div class="matrix-cell">Needs activation proof to make the wedge feel undeniable inside the product.</div>
+            </div>
+          </article>
+
+          <div class="gallery gallery--pair">
+            <button class="shot-card" type="button" data-lightbox="assets/screenshots/01-landing-page.png" data-caption="The landing page frames Soon as a modern self-serve product with a clear category promise.">
+              <img src="assets/screenshots/01-landing-page.png" alt="Soon landing page" loading="lazy" />
+              <span>Strong first impression</span>
+            </button>
+            <button class="shot-card" type="button" data-lightbox="assets/screenshots/35-about-page.png" data-caption="The about page supports the impression of a real, focused team serving operationally serious customers.">
+              <img src="assets/screenshots/35-about-page.png" alt="Soon about page" loading="lazy" />
+              <span>Company credibility</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="wins" data-title="Quick Wins">
+        <div class="section-heading">
+          <p class="eyebrow">Quick wins</p>
+          <h2>Fix the sequence before adding more product surface area.</h2>
+        </div>
+
+        <div id="quick-wins" class="quick-grid"></div>
+      </section>
+
+      <section class="slide" id="roadmap" data-title="Roadmap">
+        <div class="section-heading">
+          <p class="eyebrow">Strategic roadmap</p>
+          <h2>The right roadmap starts with first-value reliability, then scales the flywheel intentionally.</h2>
+        </div>
+
+        <div id="roadmap-grid" class="roadmap-grid"></div>
+      </section>
+
+      <section class="slide" id="metrics" data-title="Metrics">
+        <div class="section-heading">
+          <p class="eyebrow">Instrumentation</p>
+          <h2>The next instrumentation layer should focus on where trial intent dies, not just where traffic lands.</h2>
+        </div>
+
+        <div id="metrics-grid" class="metric-groups"></div>
       </section>
 
       <section class="slide slide--closing" id="close" data-title="Close">
@@ -227,24 +483,22 @@
           <p class="eyebrow">Closing frame</p>
           <h2>Keep the commercial engine. Rebuild the first-value sequence.</h2>
           <p class="closing__thesis">
-            If Soon fixes activation sequencing, the existing pricing and checkout machinery gives it a much faster path
-            to real PLG compounding than most teams at this stage.
+            If Soon fixes activation sequencing, the existing pricing and checkout machinery gives it a much faster
+            path to real PLG compounding than most teams at this stage.
           </p>
 
           <div class="closing__grid">
             <div class="closing-card">
-              <h3>Metrics to instrument next</h3>
-              <div id="metrics-grid" class="metric-list"></div>
+              <h3>Final takeaway</h3>
+              <ul class="bullet-list bullet-list--tight">
+                <li>Soon already behaves like a sellable self-serve business.</li>
+                <li>The first user session still withholds the payoff for too long.</li>
+                <li>The fastest growth win is to prove value first, then collect setup detail.</li>
+              </ul>
             </div>
             <div class="closing-card">
               <h3>Sources used</h3>
-              <ul class="bullet-list bullet-list--tight">
-                <li><a href="https://soon.works/" target="_blank" rel="noreferrer">soon.works homepage</a></li>
-                <li><a href="https://soon.works/pricing/" target="_blank" rel="noreferrer">public pricing</a></li>
-                <li><a href="https://soon.works/about/" target="_blank" rel="noreferrer">about page</a></li>
-                <li><a href="https://www.linkedin.com/company/soonhq/" target="_blank" rel="noreferrer">LinkedIn company page</a></li>
-                <li>Fresh product screenshots from the March 21, 2026 assessment run</li>
-              </ul>
+              <ul id="source-list" class="bullet-list bullet-list--tight"></ul>
             </div>
           </div>
         </div>
@@ -258,9 +512,9 @@
     </div>
 
     <dialog id="lightbox" class="lightbox">
-      <form method="dialog" class="lightbox__inner">
-        <button class="lightbox__close" value="close" type="submit" aria-label="Close image">×</button>
-        <img id="lightbox-image" alt="" />
+      <form method="dialog" class="lightbox__shell">
+        <button class="lightbox__close" value="cancel" aria-label="Close image" type="submit">×</button>
+        <img id="lightbox-image" src="" alt="" />
         <p id="lightbox-caption"></p>
       </form>
     </dialog>

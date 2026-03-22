@@ -1,101 +1,28 @@
-const scoreData = [
+const journeyData = [
   {
-    name: "Strategy",
-    score: 6,
-    confidence: "Medium",
-    note: "Credible wedge versus spreadsheets and heavy WFM, but the first-run experience still doesn’t sharpen the obvious choice."
-  },
-  {
-    name: "User",
-    score: 7,
-    confidence: "Medium",
-    note: "Soon clearly understands the operator persona, but that clarity is not yet translated into onboarding."
-  },
-  {
-    name: "Model",
-    score: 5,
-    confidence: "High",
-    note: "Trial-first and self-serve are directionally right, but value arrives too late to fully support the model."
-  },
-  {
-    name: "Offer",
-    score: 7,
-    confidence: "Medium",
-    note: "The public story is strong, though not yet irresistible in the first product session."
-  },
-  {
-    name: "Onboarding",
-    score: 4,
-    confidence: "High",
-    note: "Verification, re-sign-in, setup wizard, and survey all appear before the product proves value."
-  },
-  {
-    name: "Pricing",
-    score: 6,
-    confidence: "High",
-    note: "Pricing is visible and self-serve, but naming and currency logic drift across the site, app, and checkout."
-  },
-  {
-    name: "Data",
-    score: 5,
-    confidence: "Low",
-    note: "Some intent is clearly captured, but there is no visible evidence of tight first-value instrumentation."
-  },
-  {
-    name: "Process",
-    score: 4,
-    confidence: "Low",
-    note: "The observed inconsistencies suggest the optimization loop is still loose."
-  },
-  {
-    name: "Team",
-    score: 5,
-    confidence: "Low",
-    note: "The outputs imply a capable team, but product-growth alignment still looks incomplete."
-  }
-];
-
-const stageData = [
-  {
-    title: "Stage 1",
-    subtitle: "Build an Unshakeable Foundation",
-    score: 6.0,
-    note: "The wedge and user understanding are credible, but the model still fails to deliver value early enough."
-  },
-  {
-    title: "Stage 2",
-    subtitle: "Unlock Self-Serve Customers",
-    score: 5.7,
-    note: "Soon’s commercial story is stronger than the onboarding reality."
-  },
-  {
-    title: "Stage 3",
-    subtitle: "Ignite Exponential Expansion",
-    score: 4.7,
-    note: "Data, process, and team signals still look less mature from the outside."
-  }
-];
-
-const flywheelData = [
-  {
-    title: "Attract",
-    score: 7,
-    note: "Public pricing, industry pages, and comparison framing are strong enough to pull qualified traffic."
-  },
-  {
-    title: "Activate",
-    score: 4,
-    note: "The value handoff from signup to usable schedule is the weakest stage."
-  },
-  {
-    title: "Revenue",
+    name: "First impression",
     score: 8,
-    note: "In-product upgrade and real checkout are already best-in-class for this stage."
+    note: "Clear category framing, credible CTA, public pricing, and no-credit-card trial promise all help Soon look like a real PLG business."
   },
   {
-    title: "Retain / Expand",
+    name: "Signup experience",
     score: 6,
-    note: "The category is sticky, but expansion triggers are not showcased early."
+    note: "The form is light and SSO-ready, but the verification detour and ambiguous password submit state reduce confidence."
+  },
+  {
+    name: "First product experience",
+    score: 5,
+    note: "The board UI looks good once reached, but three setup steps and a survey arrive before user-serving proof."
+  },
+  {
+    name: "Time to value",
+    score: 4,
+    note: "Too many steps sit between signup and a clearly populated schedule or reliable first win."
+  },
+  {
+    name: "Upgrade path",
+    score: 8,
+    note: "The billing path is visible, in-product, and leads directly to Stripe Checkout without a sales detour."
   }
 ];
 
@@ -110,7 +37,7 @@ const activationSteps = [
     step: "02",
     title: "Signup and password",
     friction: 5,
-    note: "Light form, but the submit state is ambiguous and gives little progress context."
+    note: "The form is light, but the submit state does not clearly explain progress."
   },
   {
     step: "03",
@@ -126,30 +53,157 @@ const activationSteps = [
   },
   {
     step: "05",
-    title: "Team + profile + challenge setup",
-    friction: 8,
-    note: "Company-serving setup arrives before user-serving proof."
+    title: "Team and profile setup",
+    friction: 5,
+    note: "Some fields are auto-filled, but the user is still working before the product proves itself."
   },
   {
     step: "06",
-    title: "Empty board state",
-    friction: 5,
-    note: "The product shell is real, but the first board still has no demonstrated value."
+    title: "Challenge question",
+    friction: 8,
+    note: "Soon asks a qualitative research question before delivering a user-serving result."
   },
   {
     step: "07",
-    title: "AI/manual scheduling attempt",
+    title: "Empty board state",
+    friction: 5,
+    note: "The product shell is real, but the board is still empty when value should be obvious."
+  },
+  {
+    step: "08",
+    title: "AI or manual scheduling attempt",
     friction: 7,
-    note: "Promising path, but the observed result state was too slow or ambiguous to create trust."
+    note: "Promising path, but the observed result was too slow or ambiguous to create trust."
+  }
+];
+
+const scoreData = [
+  {
+    name: "Strategy",
+    score: 6,
+    confidence: "Medium",
+    note: "The wedge versus spreadsheets and heavy WFM is credible, but the first-run sequence does not sharpen the obvious choice."
+  },
+  {
+    name: "User",
+    score: 7,
+    confidence: "Medium",
+    note: "Soon clearly understands the operator persona, but that clarity is not yet translated into activation."
+  },
+  {
+    name: "Model",
+    score: 5,
+    confidence: "High",
+    note: "Trial-first and self-serve are directionally right, but the model fails to deliver value early enough."
+  },
+  {
+    name: "Offer",
+    score: 7,
+    confidence: "Medium",
+    note: "The public story is strong, though the first product session is not yet differentiated enough to feel irresistible."
+  },
+  {
+    name: "Onboarding",
+    score: 4,
+    confidence: "High",
+    note: "Verification, re-sign-in, setup wizard, and the challenge survey all show up before value is proven."
+  },
+  {
+    name: "Pricing",
+    score: 6,
+    confidence: "High",
+    note: "Pricing is visible and self-serve, but naming and currency logic drift across the site, app, and checkout."
+  },
+  {
+    name: "Data",
+    score: 5,
+    confidence: "Low",
+    note: "Intent is clearly captured, but there is no visible evidence of rigorous first-value instrumentation."
+  },
+  {
+    name: "Process",
+    score: 4,
+    confidence: "Low",
+    note: "Observed inconsistencies suggest the optimization loop is still loose."
+  },
+  {
+    name: "Team",
+    score: 5,
+    confidence: "Low",
+    note: "The output implies a capable team, but product-growth alignment still looks incomplete from the outside."
+  }
+];
+
+const stageData = [
+  {
+    title: "Stage 1",
+    subtitle: "Build an Unshakeable Foundation",
+    score: 6.0,
+    note: "Soon has a credible wedge and clear user category, but the model still reaches value too late."
+  },
+  {
+    title: "Stage 2",
+    subtitle: "Unlock Self-Serve Customers",
+    score: 5.7,
+    note: "The commercial story is stronger than the onboarding reality."
+  },
+  {
+    title: "Stage 3",
+    subtitle: "Ignite Exponential Expansion",
+    score: 4.7,
+    note: "Data, process, and team signals are the least visible and least mature from the outside."
+  }
+];
+
+const flywheelData = [
+  {
+    title: "Attract",
+    score: 7,
+    note: "Public pricing, comparison pages, and category framing are already strong enough to pull qualified traffic."
+  },
+  {
+    title: "Activate",
+    score: 4,
+    note: "The value handoff from signup to usable schedule is the weakest stage."
+  },
+  {
+    title: "Revenue",
+    score: 8,
+    note: "In-product upgrade and direct checkout are already best-in-class for this stage."
+  },
+  {
+    title: "Retain / Expand",
+    score: 6,
+    note: "The category is sticky, but the expansion triggers are not showcased early enough."
   }
 ];
 
 const quickWins = [
-  "Move the “Tell us your challenge” prompt out of first-run onboarding.",
-  "Auto-create a demo board with sample data instead of presenting an empty board.",
-  "Fix verification so the user lands authenticated inside the product.",
-  "Make the first successful action unmistakable with clear progress and guaranteed result states.",
-  "Unify plan naming and currency logic across site, app, and checkout."
+  {
+    title: "Move the challenge prompt out of first-run onboarding",
+    impact: "High leverage",
+    note: "Ask for user research after the user creates a board, shift, or first schedule."
+  },
+  {
+    title: "Auto-create a named demo board with sample data",
+    impact: "High leverage",
+    note: "Do not make an empty board the first proof point. Show an editable, partially populated schedule."
+  },
+  {
+    title: "Fix the verification-to-login handoff",
+    impact: "Trust repair",
+    note: "After verification, the user should land authenticated inside the app instead of signing in again."
+  },
+  {
+    title: "Make the first successful action unmistakable",
+    impact: "Activation lift",
+    note: "If AI takes time, show visible progress and a guaranteed result. If manual creation has prerequisites, expose them clearly."
+  },
+  {
+    title: "Unify plan naming and currency logic",
+    impact: "Revenue clarity",
+    note: "The public site, in-app billing, and checkout should speak the same commercial language."
+  }
 ];
 
 const roadmap = [
@@ -157,17 +211,17 @@ const roadmap = [
     window: "0–30 days",
     title: "Remove avoidable activation drag",
     items: [
-      "Simplify the signup-to-first-board sequence",
+      "Simplify signup-to-first-board sequencing",
       "Delay research questions until after value",
-      "Create a guided first schedule path"
+      "Create a guided first schedule path with a visible completion state"
     ]
   },
   {
     window: "30–90 days",
-    title: "Design around one first-job-to-be-done",
+    title: "Design around one first job-to-be-done",
     items: [
       "Create team → board → role → person → schedule",
-      "Turn checklist into a reliable progress engine",
+      "Turn the checklist into a reliable progress engine",
       "Ship industry-specific starter templates"
     ]
   },
@@ -175,25 +229,48 @@ const roadmap = [
     window: "90+ days",
     title: "Scale the flywheel intentionally",
     items: [
-      "Instrument PQL thresholds around first-value behaviors",
-      "Build publishing/sharing into activation",
+      "Instrument explicit PQL thresholds",
+      "Build a publish/share loop into activation",
       "Create a cleaner SMB-to-midmarket expansion path"
     ]
   }
 ];
 
-const metrics = [
-  "Visitor → signup start",
-  "Signup start → password set",
-  "Password set → email verified",
-  "Email verified → first authenticated session",
-  "First authenticated session → board created",
-  "Board created → first shift created",
-  "Board created → first successful AI-generated schedule",
-  "Board created → first teammate invited",
-  "Trial start → billing page viewed",
-  "Billing page viewed → checkout opened",
-  "Checkout opened → paid conversion"
+const metricGroups = [
+  {
+    title: "Acquisition to trial",
+    items: [
+      "Visitor → signup start",
+      "Signup start → password set",
+      "Password set → email verified",
+      "Email verified → first authenticated session"
+    ]
+  },
+  {
+    title: "Activation depth",
+    items: [
+      "First authenticated session → board created",
+      "Board created → first shift created",
+      "Board created → first successful AI-generated schedule",
+      "Board created → first teammate invited"
+    ]
+  },
+  {
+    title: "Revenue intent",
+    items: [
+      "Trial start → billing page viewed",
+      "Billing page viewed → checkout opened",
+      "Checkout opened → paid conversion"
+    ]
+  }
+];
+
+const sources = [
+  { label: "soon.works homepage", href: "https://soon.works/" },
+  { label: "public pricing", href: "https://soon.works/pricing/" },
+  { label: "about page", href: "https://soon.works/about/" },
+  { label: "LinkedIn company page", href: "https://www.linkedin.com/company/soonhq/" },
+  { label: "Fresh product screenshots from the March 21, 2026 assessment run" }
 ];
 
 function frictionClass(score) {
@@ -202,14 +279,38 @@ function frictionClass(score) {
   return "friction-high";
 }
 
-function renderScorecards() {
+function renderCollections() {
+  const journeyGrid = document.getElementById("journey-grid");
+  const timeline = document.getElementById("activation-timeline");
   const scoreGrid = document.getElementById("score-grid");
   const stageGrid = document.getElementById("stage-grid");
   const flywheelGrid = document.getElementById("flywheel-grid");
   const quickWinsNode = document.getElementById("quick-wins");
   const roadmapGrid = document.getElementById("roadmap-grid");
   const metricsGrid = document.getElementById("metrics-grid");
-  const timeline = document.getElementById("activation-timeline");
+  const sourceList = document.getElementById("source-list");
+
+  journeyGrid.innerHTML = journeyData.map((item) => `
+    <article class="journey-card">
+      <div class="journey-card__head">
+        <div class="journey-card__name">${item.name}</div>
+        <div class="journey-card__value">${item.score}/10</div>
+      </div>
+      <div class="journey-card__bar"><span class="journey-card__fill" style="--fill: ${item.score * 10}%"></span></div>
+      <p class="journey-card__note">${item.note}</p>
+    </article>
+  `).join("");
+
+  timeline.innerHTML = activationSteps.map((item) => `
+    <article class="timeline-step">
+      <div class="timeline-step__step">${item.step}</div>
+      <div>
+        <div class="timeline-step__title">${item.title}</div>
+        <div class="timeline-step__note">${item.note}</div>
+      </div>
+      <div class="timeline-step__friction ${frictionClass(item.friction)}">${item.friction}/10</div>
+    </article>
+  `).join("");
 
   scoreGrid.innerHTML = scoreData.map((item) => `
     <article class="score-card">
@@ -248,13 +349,13 @@ function renderScorecards() {
     </article>
   `).join("");
 
-  quickWinsNode.innerHTML = `
-    <article class="roadmap-card">
-      <span class="roadmap-card__window">Quick wins</span>
-      <h3>Fix the sequence before adding more product surface area.</h3>
-      <ul>${quickWins.map((item) => `<li>${item}</li>`).join("")}</ul>
+  quickWinsNode.innerHTML = quickWins.map((item) => `
+    <article class="quick-card">
+      <span class="quick-card__impact">${item.impact}</span>
+      <h3>${item.title}</h3>
+      <p>${item.note}</p>
     </article>
-  `;
+  `).join("");
 
   roadmapGrid.innerHTML = roadmap.map((item) => `
     <article class="roadmap-card">
@@ -264,22 +365,20 @@ function renderScorecards() {
     </article>
   `).join("");
 
-  metricsGrid.innerHTML = metrics.map((item) => `
-    <article class="metric-card">
-      <p>${item}</p>
+  metricsGrid.innerHTML = metricGroups.map((group) => `
+    <article class="metric-group">
+      <h3>${group.title}</h3>
+      <div class="metric-list">
+        ${group.items.map((item) => `
+          <article class="metric-card"><p>${item}</p></article>
+        `).join("")}
+      </div>
     </article>
   `).join("");
 
-  timeline.innerHTML = activationSteps.map((item) => `
-    <article class="timeline-step">
-      <div class="timeline-step__step">${item.step}</div>
-      <div>
-        <div class="timeline-step__title">${item.title}</div>
-        <div class="timeline-step__note">${item.note}</div>
-      </div>
-      <div class="timeline-step__friction ${frictionClass(item.friction)}">${item.friction}/10</div>
-    </article>
-  `).join("");
+  sourceList.innerHTML = sources.map((item) => item.href
+    ? `<li><a href="${item.href}" target="_blank" rel="noreferrer">${item.label}</a></li>`
+    : `<li>${item.label}</li>`).join("");
 }
 
 function setupNavigation() {
@@ -363,6 +462,6 @@ function setupLightbox() {
   });
 }
 
-renderScorecards();
+renderCollections();
 setupNavigation();
 setupLightbox();
