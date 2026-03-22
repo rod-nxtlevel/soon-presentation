@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Soon presentation icon">
+  <rect width="128" height="128" rx="28" fill="#101323"/>
+  <path d="M28 37c0-8.837 7.163-16 16-16h12c17.673 0 32 14.327 32 32S73.673 85 56 85H44v22H28V37zm16 0v32h12c8.837 0 16-7.163 16-16S64.837 37 56 37H44z" fill="#F25F3A"/>
+  <circle cx="94" cy="96" r="12" fill="#2C6CF6"/>
+</svg>
